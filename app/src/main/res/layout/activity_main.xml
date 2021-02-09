@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".main.GameActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_constrainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88808080"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/score_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Score : 550" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/pause_imageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/action_pause"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/game_frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_constrainLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tap_to_start_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="Tap to start"
+            android:textSize="30sp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/player"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            tools:src="@drawable/cat2" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/food"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/food" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/monster"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/monster2" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/monster2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/monster1" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/diamaond"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/dimaond" />
+
+        <FrameLayout
+            android:id="@+id/pause_state_frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/pause_state_imageView"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="120dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/pause" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/start_imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="170dp"
+                android:background="@drawable/action_start" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
